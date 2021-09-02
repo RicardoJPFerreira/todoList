@@ -1,5 +1,14 @@
-import React, {useState} from 'react';
-import { Keyboard, KeyboardAvoidingView, Platform, StyleSheet, Text, TextInput, TouchableOpacity, View } from 'react-native';
+import React, { useState } from 'react';
+import {
+  Keyboard,
+  KeyboardAvoidingView,
+  Platform,
+  StyleSheet,
+  Text,
+  TextInput,
+  TouchableOpacity,
+  View
+} from 'react-native';
 import Task from './components/Task';
 
 export default function App() {
@@ -24,11 +33,11 @@ export default function App() {
         <Text style={styles.sectionTitle}>Grosseries</Text>
 
         <View style={styles.items}>
-         {
+          {
             taskItems.map((item, index) => {
               return (
-                <TouchableOpacity key={index}  onPress={() => completeTask(index)}>
-                  <Task text={item} /> 
+                <TouchableOpacity key={index} onPress={() => completeTask(index)}>
+                  <Task text={item} />
                 </TouchableOpacity>
               )
             })
